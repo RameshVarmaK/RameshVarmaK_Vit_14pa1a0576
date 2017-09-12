@@ -86,11 +86,41 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+			if(student==null)
+				try {
+					throw IllegalArgumentException;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			else {
+				Student []tmpStudent=new Student[students.length+1];
+				for(int i=students.length-1;i>=0;i--) {
+					tmpStudent[i+1]=students[i];
+				}
+				tmpStudent[0]=student;
+				students=tmpStudent;
+			}
 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		if(student==null)
+			try {
+				throw IllegalArgumentException;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		else {
+			Student []tmpStudent=new Student[students.length+1];
+			for(int i=students.length-1;i>=0;i--) {
+				tmpStudent[i]=students[i];
+			}
+			tmpStudent[tmpStudent.length-1]=student;
+			students=tmpStudent;
+		}
 	}
 
 	@Override
