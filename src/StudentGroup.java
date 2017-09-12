@@ -272,7 +272,13 @@ public class StudentGroup implements StudentArrayOperation {
 		for(index=0;index<students.length;index++) {
 			if(students[index]==student) break;
 		}
-		removeToIndex(index);
+		int val=(students.length-1)-index;
+		Student []tmpStudent=new Student[val+1];
+		int tmp=index;
+		for(int i=0;i<val+1;i++) {
+			tmpStudent[i]=students[tmp++];
+		}
+		students=tmpStudent;
 	}
 
 	@Override
