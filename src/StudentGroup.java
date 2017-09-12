@@ -250,9 +250,9 @@ public class StudentGroup implements StudentArrayOperation {
 				e.printStackTrace();
 			}
 		int val=(students.length-1)-index;
-		Student []tmpStudent=new Student[val];
-		int tmp=val;
-		for(int i=0;i<val;i++) {
+		Student []tmpStudent=new Student[val+1];
+		int tmp=index;
+		for(int i=0;i<val+1;i++) {
 			tmpStudent[i]=students[tmp++];
 		}
 		students=tmpStudent;
