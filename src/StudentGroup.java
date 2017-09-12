@@ -204,6 +204,18 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
+		if(index<0||index>students.length-1)
+			try {
+				throw IllegalArgumentException;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		Student []tmpStudent=new Student[(students.length-1)-index];
+		for(int i=0;i<index;i++) {
+			tmpStudent[i]=students[i];
+		}
+		students=tmpStudent;
 	}
 
 	@Override
