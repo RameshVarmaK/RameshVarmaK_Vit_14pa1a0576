@@ -204,58 +204,16 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
-		if(index<0||index>students.length-1)
-			try {
-				throw IllegalArgumentException;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		Student []tmpStudent=new Student[(students.length-1)-index];
-		for(int i=0;i<index;i++) {
-			tmpStudent[i]=students[i];
-		}
-		students=tmpStudent;
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
-		if(student==null)
-			try {
-				throw IllegalArgumentException;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		int index;
-		for(index=0;index<students.length;index++) {
-			if(students[index]==student) break;
-		}
-		Student []tmpStudent=new Student[(students.length-1)-index];
-		for(int i=0;i<index;i++) {
-			tmpStudent[i]=students[i];
-		}
-		students=tmpStudent;
 	}
 
 	@Override
 	public void removeToIndex(int index) {
 		// Add your implementation here
-		if(index<0||index>students.length-1)
-			try {
-				throw IllegalArgumentException;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		int val=(students.length-1)-index;
-		Student []tmpStudent=new Student[val];
-		int tmp=val;
-		for(int i=0;i<val;i++) {
-			tmpStudent[i]=students[tmp++];
-		}
-		students=tmpStudent;
 	}
 
 	@Override
